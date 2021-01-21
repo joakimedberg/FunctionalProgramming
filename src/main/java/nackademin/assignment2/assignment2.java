@@ -71,7 +71,6 @@ public class assignment2 {
 
     public List<String> getMinors(String name) {
         if (map.containsKey(name)) {
-            minors.add("[" + name+ "]");
             map.get(name).forEach(minors::add);
             return getMinors(minors);
         } else {
@@ -84,7 +83,6 @@ public class assignment2 {
         List<String> list = new ArrayList<>(names);
         for (String n : names) {
             if (map.containsKey(n)) {
-                minors.add("\n[" + n+ "]");
                 map.get(n).forEach(minors::add);
                 map.get(n).forEach(list::add);
 
